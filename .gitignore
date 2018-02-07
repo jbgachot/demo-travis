@@ -1,0 +1,9 @@
+.terraform
+*tfstate*
+!*.keep
+.keys
+tmp/*
+.envrc*
+*.retry
+.DS_Store
+*.swp
