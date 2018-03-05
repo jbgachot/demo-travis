@@ -13,10 +13,10 @@
     },
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
-    "ami_name": "travis{{ timestamp }}",
-    "subnet_id": "subnet-5c24d13a",
+    "ami_name": "demo-travis-{{ timestamp }}",
+    "subnet_id": "subnet-6d832725",
     "type": "amazon-ebs",
-    "vpc_id": "vpc-a175a2c7"
+    "vpc_id": "vpc-dc1595ba"
   }],
   "provisioners": [
     {
@@ -25,12 +25,12 @@
     },
     {
       "type": "file",
-      "source": "{{template_dir}}/files/index.html",
+      "source": "{{template_dir}}/../app/index.html",
       "destination": "/tmp/index.html"
     },
     {
       "type": "shell",
-      "scripts": ["{{template_dir}}/scripts/config.sh"],
+      "scripts": ["{{template_dir}}/scripts/install.sh"],
       "execute_command": "sudo -E sh '{{ .Path }}'"
     }
   ]
