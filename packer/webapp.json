@@ -14,9 +14,9 @@
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
     "ami_name": "demo-travis-{{ timestamp }}",
-    "subnet_id": "subnet-6d832725",
+    "subnet_id": <SUBNET_ID>,
     "type": "amazon-ebs",
-    "vpc_id": "vpc-dc1595ba"
+    "vpc_id": <VPC_ID>
   }],
   "provisioners": [
     {

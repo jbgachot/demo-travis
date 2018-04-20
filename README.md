@@ -1,9 +1,8 @@
 #### Travis CI demo
 
-1) Edit .travis.yml and setup TERRAFORM_DEMO_BUCKET variable to match your tfstates bucket, edit terraform/vpc/main.tf and setup bucket  in s3 backend
-2) Apply terraform/vpc for VPC initialization
+1) Edit .travis.yml and setup TERRAFORM_DEMO_BUCKET variable to match your tfstates bucket, edit terraform/vpc/main.tf and setup bucket in s3 backend
 
-In travis make sure to enable repo and add followings "Environment Variables"
+In travis make sure to enable repo and add followings secured "Environment Variables" from travis web interface :
 ```
 AWS_DEFAULT_REGION
 AWS_REGION
